@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://www.bhaiali.com/</loc>
   </url><url>
-    <loc>/abooooot/</loc>
+    <loc>https://www.bhaiali.com/abooooot/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://www.bhaiali.com/categories/</loc>
   </url><url>
-    <loc>/contact/</loc>
+    <loc>https://www.bhaiali.com/contact/</loc>
   </url><url>
-    <loc>/myblogs/</loc>
+    <loc>https://www.bhaiali.com/myblogs/</loc>
   </url><url>
-    <loc>/myblogs/post1/</loc>
+    <loc>https://www.bhaiali.com/myblogs/post1/</loc>
   </url><url>
-    <loc>/myblogs/post2/</loc>
+    <loc>https://www.bhaiali.com/myblogs/post2/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://www.bhaiali.com/tags/</loc>
   </url>
 </urlset>

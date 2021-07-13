@@ -8,22 +8,475 @@
     
  
     
-    <link href="/scss/main.min.13e400aa7eeb4ec0bfdbdfb0a9337dd17695d07d36c66b951f7f9646d528c3a1.css" rel="stylesheet">
+    <link href="https://www.bhaiali.com/scss/main.min.404fbceda03b53be773e0bcd9a3c18ff38e815ec08ed768ba3898514bbbeeaeb.css" rel="stylesheet">
     <title>Ali</title>
 </head>
 <body>
-    <nav>
-    <a href="/">Home</a>
-    <div>
-        
-            <a href="/abooooot/">About</a>
-        
-            <a href="/contact/">My Contact</a>
-        
+    <div class="container">
+    <div id="navigation-bar">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                
+                    <li><a href="https://www.bhaiali.com/abooooot/">About</a></li>
+                
+                    <li><a href="https://www.bhaiali.com/contact/">My Contact</a></li>
+                
+            </ul>
+        </nav>
     </div>
-</nav>
+</div>
+
     
     <h1>This is single page</h1>
+
+    <article>
+        <ul>
+<li><a href="#hugo-the-worlds-fastest-framework-for-building-static-websites">HUGO The World&rsquo;s Fastest Framework for Building Static Websites</a>
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#install-on-linux">Install on linux</a>
+<ul>
+<li><a href="#via-apt-get">Via apt-get</a></li>
+<li><a href="#via-homebrew">Via Homebrew</a></li>
+</ul>
+</li>
+<li><a href="#create-site">Create Site</a></li>
+<li><a href="#add-layout-pages">Add Layout pages</a>
+<ul>
+<li><a href="#baseofhtml-template"><code>baseof.html</code> template</a></li>
+<li><a href="#listhtml-template"><code>list.html</code> template</a>
+<ul>
+<li><a href="#listhtml-for-general"><code>list.html</code> for general</a></li>
+<li><a href="#add-listhtml-for-specific-folder">Add <code>list.html</code> for specific folder</a></li>
+</ul>
+</li>
+<li><a href="#add-singlehtml">Add <code>single.html</code></a>
+<ul>
+<li><a href="#add-singlehtml-for-general">Add <code>single.html</code> for general</a></li>
+<li><a href="#add-singlehtml-for-specific-folder">Add <code>single.html</code> for specific folder</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#add-content">Add Content</a>
+<ul>
+<li><a href="#add-_indexmd-for-general">Add <code>_index.md</code> for general</a>
+<ul>
+<li><a href="#add-_indexmd-for-specific-folder">Add <code>_index.md</code> for specific folder</a></li>
+</ul>
+</li>
+<li><a href="#add-aboutmd-sample-content-page">Add <code>about.md</code> sample content page</a></li>
+<li><a href="#add-aboutmd-sample-content-page-1">Add <code>about.md</code> sample content page</a></li>
+<li><a href="#update-listhtml">Update <code>list.html</code></a></li>
+</ul>
+</li>
+<li><a href="#add-css-stylesheet">Add <code>css</code> stylesheet</a>
+<ul>
+<li><a href="#add-css-in-assets-directory">Add <code>css</code> in <code>assets</code> directory</a></li>
+<li><a href="#add-scss">Add <code>scss</code></a>
+<ul>
+<li><a href="#add-scss-components">Add <code>scss</code> Components</a></li>
+</ul>
+</li>
+<li><a href="#add-css-components-still-confusing">Add <code>css</code> Components (still confusing)</a></li>
+</ul>
+</li>
+<li><a href="#add-components">Add Components</a>
+<ul>
+<li><a href="#add-partials">Add Partials</a></li>
+<li><a href="#add-partials-hard-coded">Add partials (hard coded)</a></li>
+<li><a href="#show-data-in-partials-from-frontmatter">Show data in partials from frontmatter</a></li>
+<li><a href="#include-values-of-_indexmd-keys-in-partials">Include <code>values</code> of <code>_index.md</code> <code>keys</code> in partials</a></li>
+<li><a href="#loop-over-_indexmds-keys-and-values-data-manually">Loop over <code>_index.md</code>&rsquo;s <code>keys</code> and <code>values</code> data manually</a></li>
+<li><a href="#loop-over-all-_indexmd-dynamically">Loop over all <code>_index.md</code> dynamically</a></li>
+<li><a href="#create-data-just-like-api">Create data just like API</a>
+<ul>
+<li><a href="#update-sitelayoutspartialsherohtml">Update <code>&lt;site&gt;/layouts/partials/hero.html</code></a></li>
+<li><a href="#update-sitelayoutspartialsgridhtml">Update <code>&lt;site&gt;/layouts/partials/grid.html</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#deployment">Deployment</a>
+<ul>
+<li><a href="#github-actions-for-hugo">GitHub Actions for Hugo</a></li>
+<li><a href="#create-workflow">Create workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="hugohttpsgohugoio-the-worlds-fastest-framework-for-building-static-websites"><a href="https://gohugo.io/">HUGO</a> The World&rsquo;s Fastest Framework for Building Static Websites</h1>
+<h2 id="features">Features</h2>
+<ul>
+<li>Multilingual</li>
+<li>Standard binary</li>
+<li>Drafts</li>
+<li>Pagination</li>
+<li>Redirects (Aliases)</li>
+<li>Asset pipline</li>
+<li>Live reload</li>
+<li>Taxonomies</li>
+<li>Content Types</li>
+<li>Shortcodes</li>
+</ul>
+<h2 id="install-on-linux">Install on linux</h2>
+<h3 id="via-apt-get">Via apt-get</h3>
+<ul>
+<li><code>sudo apt-get install hugo</code>: This method is not recommended because the Hugo in linux package managers  for Debian and Ubuntu is usually a few versions behind.</li>
+<li><code>sudo hugo version</code>: Check version</li>
+<li><code>sudo apt-get remove hugo</code>: Uninstall</li>
+</ul>
+<h3 id="via-homebrew">Via Homebrew</h3>
+<ul>
+<li><code>brew install hugo</code> Install recommended (because of lates version)</li>
+<li><code>hugo version</code>: Check version</li>
+</ul>
+<h2 id="create-site">Create Site</h2>
+<ul>
+<li>
+<p><code>hugo new site &lt;siteName&gt;</code>: It will create a new site <code>mysite</code></p>
+<pre><code>Congratulations! Your new Hugo site is created in /media/ali/data/projects/hugo/hugoSecond/mysite.
+
+Just a few more steps and you're ready to go:
+
+1. Download a theme into the same-named folder.
+Choose a theme from https://themes.gohugo.io/ or
+create your own with the &quot;hugo new theme &lt;THEMENAME&gt;&quot; command.
+2. Perhaps you want to add some content. You can add single files
+with &quot;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&quot;.
+3. Start the built-in live server via &quot;hugo server&quot;.
+
+Visit https://gohugo.io/ for quickstart guide and full documentation.
+</code></pre>
+</li>
+<li>
+<p>Rename <code>config.toml</code> to <code>config.yml</code> and change syntax to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">baseURL</span>: <span style="color:#e6db74">&#34;http://example.org/&#34;</span>
+<span style="color:#f92672">languageCode</span>: <span style="color:#e6db74">&#34;en-us&#34;</span>
+<span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;My New Hugo Site&#34;</span>
+</code></pre></div></li>
+<li>
+<p><code>hugo server -D</code>: here <code>-D</code> flag allows us to see any drafts that we have</p>
+</li>
+<li>
+<p>site at <code>http://localhost:1313/</code> will have no content yet</p>
+</li>
+</ul>
+<h2 id="add-layout-pages">Add Layout pages</h2>
+<h3 id="baseofhtml-template"><code>baseof.html</code> template</h3>
+<p><code>&lt;site&gt;/layouts/_default/baseof.html</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+{{ partial &#34;head&#34; . }} <span style="color:#75715e">&lt;!-- {{/* &lt;site&gt;/layouts/partials/head.html */}}--&gt;</span>
+&lt;<span style="color:#f92672">body</span>&gt;
+    <span style="color:#75715e">&lt;!-- Nav bar --&gt;</span>
+    &lt;<span style="color:#f92672">nav</span>&gt;
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span>&gt;Home&lt;/<span style="color:#f92672">a</span>&gt;
+        &lt;<span style="color:#f92672">div</span>&gt;
+            {{ range where .Site.RegularPages &#34;Type&#34; &#34;page&#34; }}
+                &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+            {{ end }}
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">nav</span>&gt;
+
+    <span style="color:#75715e">&lt;!-- {{/* Create block content just like django */}} --&gt;</span>
+    {{ block &#34;content&#34; . }}
+
+    {{ end }}
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="listhtml-template"><code>list.html</code> template</h3>
+<h4 id="listhtml-for-general"><code>list.html</code> for general</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ define &#34;content&#34; }}
+    &lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+
+    {{ range .Params.Components }}
+        {{ range $component, $data := . }}
+            {{ partial (printf &#34;%s.html&#34; $component) (dict $component $data) }}
+        {{ end }}
+    {{ end }}
+    &lt;<span style="color:#f92672">br</span>&gt;
+    Check out our blog:
+    &lt;<span style="color:#f92672">ul</span>&gt;
+        {{ range where .Site.Pages &#34;Type&#34; &#34;blog_posts&#34; }}
+            &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+        {{ end }}
+    &lt;/<span style="color:#f92672">ul</span>&gt;
+{{ end }}
+</code></pre></div><h4 id="add-listhtml-for-specific-folder">Add <code>list.html</code> for specific folder</h4>
+<ul>
+<li>
+<p>Add file <code>list.html</code> in <code>&lt;site&gt;/layouts/list.html</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;{{ .Site.Title }}&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    body
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div></li>
+<li>
+<p>Insert variable <code>{{ .Site.Title }}</code></p>
+<ul>
+<li><code>.Site</code> is for <code>config.yml</code> file</li>
+<li><code>.Title</code> is for information inside <code>config.yml</code> file</li>
+</ul>
+</li>
+</ul>
+<h3 id="add-singlehtml">Add <code>single.html</code></h3>
+<h4 id="add-singlehtml-for-general">Add <code>single.html</code> for general</h4>
+<h4 id="add-singlehtml-for-specific-folder">Add <code>single.html</code> for specific folder</h4>
+<h2 id="add-content">Add Content</h2>
+<h3 id="add-_indexmd-for-general">Add <code>_index.md</code> for general</h3>
+<h4 id="add-_indexmd-for-specific-folder">Add <code>_index.md</code> for specific folder</h4>
+<p><code>&lt;site&gt;/content/_index.md</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: Homepageee
+---
+</code></pre></div><ul>
+<li>
+<p>Update <code>list.html</code>&rsquo;s body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt;{{ .Page.Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</code></pre></div><p>even you can remove <code>.Page</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</code></pre></div><p>Result will be same</p>
+</li>
+</ul>
+<h3 id="add-aboutmd-sample-content-page">Add <code>about.md</code> sample content page</h3>
+<ul>
+<li>
+<p>Add <code>about.md</code> and <code>contact.md</code> in <em>content</em> i.e. <code>content/about.md</code></p>
+</li>
+<li>
+<p>Update titles</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: &#34;About&#34;
+---
+</code></pre></div></li>
+</ul>
+<h3 id="add-aboutmd-sample-content-page-1">Add <code>about.md</code> sample content page</h3>
+<h3 id="update-listhtml">Update <code>list.html</code></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range .Pages }}
+    {{ .Title }}
+{{ end}}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range where .Site.Pages &#34;Type&#34; &#34;blog_posts&#34; }}
+    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">{{</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Permalink</span> <span style="color:#960050;background-color:#1e0010">}}</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+{{ end }}
+</code></pre></div><p><strong>DESCRIPTION</strong>:<!-- raw HTML omitted -->
+Loop over pages in <code>content</code> directory <em>Type</em> (in) the <code>blog_posts</code> directory</p>
+<ul>
+<li><code>slug: path</code>: changes the url of a file</li>
+<li><code>url: path</code>: changes the lengthy url of a file</li>
+</ul>
+<h2 id="add-css-stylesheet">Add <code>css</code> stylesheet</h2>
+<ul>
+<li>
+<p>Create dir and file <code>static/css/main.css</code></p>
+</li>
+<li>
+<p>Update <code>main.css</code></p>
+</li>
+<li>
+<p>Create dir and file <code>layout/partials.head.html</code></p>
+</li>
+<li>
+<p>Cut head from <code>baseof.html</code> and paste into <code>head.html</code></p>
+</li>
+<li>
+<p>Add to <code>head.html</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;css/main.css&#34;</span>&gt;
+
+</code></pre></div></li>
+</ul>
+<h3 id="add-css-in-assets-directory">Add <code>css</code> in <code>assets</code> directory</h3>
+<ul>
+<li>
+<p>Create dir <code>&lt;site&gt;/assets</code></p>
+</li>
+<li>
+<p>Move <code>css/main.css</code> inside  <code>&lt;site&gt;/assets/css/main.css</code></p>
+</li>
+<li>
+<p>update <code>head.html</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ $style := resources.Get &#34;css/main.css&#34; }}
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">style</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Permalink</span> <span style="color:#960050;background-color:#1e0010">}}</span>&gt;
+</code></pre></div></li>
+<li>
+<p>Restart the server</p>
+</li>
+</ul>
+<h3 id="add-scss">Add <code>scss</code></h3>
+<ul>
+<li>
+<p>Rename <code>assets/css/main.css</code> to <code>assets/scss/main.scss</code></p>
+</li>
+<li>
+<p>Update <code>head.html</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ $style := resources.Get &#34;scss/main.scss&#34; }}
+{{ $style = $style | toCSS | minify | fingerprint }}
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>&gt;
+</code></pre></div><p><strong><code>fingerprint</code></strong> function: calculates the sha256 hash of the file and includes it in the filename. This is an easy way to implement cache busting for the stylesheet because the filename will change whenever the content changes and as a result possible browser caches will then be invalidated automatically.</p>
+<p><strong><code>minify</code></strong> function: only put the stylesheet in condensed format. Condensed version have less whitespaces so uses less bandwidth</p>
+<p><strong><code>toCSS</code></strong> function: Converts the <code>.scss</code> file into <code>.css</code> file</p>
+</li>
+</ul>
+<h4 id="add-scss-components">Add <code>scss</code> Components</h4>
+<ul>
+<li>
+<p>Create a dir inside <code>scss</code> i.e. <code>&lt;site&gt;/scss/components</code></p>
+</li>
+<li>
+<p>You can create as many files as you can i.e. <code>file1.scss</code>, <code>file2.scss</code>&hellip;</p>
+</li>
+<li>
+<p>Import component files in <code>main.scss</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#66d9ef">@import</span> <span style="color:#e6db74">&#34;components/file1&#34;</span>;
+<span style="color:#66d9ef">@import</span> <span style="color:#e6db74">&#34;components/file2&#34;</span>;
+</code></pre></div></li>
+</ul>
+<p>You are done!</p>
+<h3 id="add-css-components-still-confusing">Add <code>css</code> Components (still confusing)</h3>
+<ul>
+<li>Create a dir <code>&lt;site&gt;/assets/css/components</code></li>
+<li>Create component files inside <code>components</code> folder i.e. <code>test1.css</code>, <code>test2.css</code></li>
+<li>Update <code>head.html</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ $style := resources.Get &#34;css/main.css&#34; }}
+{{ $components := readDir &#34;assets/css/components&#34; }}
+{{ range $components }}
+    {{ $component := resources.Get (printf &#34;css/components/%s .Name&#34;) }}
+    {{ $style = slice $component $style | resources.Concat .Name }}
+{{ end }}
+{{ $style = $style | minify | fingerprint }}
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $style.Permalink }}&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>&gt;
+</code></pre></div><p><code>{{ $style = slice $style | resources.Concat &quot;all.css&quot; | minify | fingerprint }}</code></p>
+<p><code>all.css</code> will be shown as a name of stylesheet</p>
+<h2 id="add-components">Add Components</h2>
+<p><code>&lt;site&gt;/content/_index.md</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">---
+<span style="color:#f92672">custome_name</span>:
+    - <span style="color:#f92672">hero</span>: <span style="color:#ae81ff">I&#39;m a hero</span>
+    - <span style="color:#f92672">grid</span>: <span style="color:#ae81ff">I&#39;m a grid</span>
+    - <span style="color:#f92672">blurg</span>: <span style="color:#ae81ff">I&#39;m a blurb</span>
+---
+</code></pre></div><p>Print on <code>list.html</code> page
+<code>layouts/_default/list.html</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range .Params.Custom_component_name }}
+    {{ . }}
+{{ end }}
+</code></pre></div><ul>
+<li>Capitalize the first letter</li>
+<li>Check on HOME page</li>
+</ul>
+<h4 id="add-partials">Add Partials</h4>
+<ul>
+<li>
+<p>Create files inside <code>partials</code></p>
+<ul>
+<li><code>hero.html</code></li>
+<li><code>grid.html</code></li>
+<li><code>blurb.html</code></li>
+<li>any number of partials</li>
+</ul>
+</li>
+<li>
+<p>Update <code>&lt;site&gt;/layouts/partials/hero.html</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h3</span>&gt;This is a hero&lt;/<span style="color:#f92672">h3</span>&gt;
+</code></pre></div></li>
+<li>
+<p>Similarly update <code>grid.html</code> and <code>blurb.html</code></p>
+</li>
+<li>
+<p>Include in <code>layouts/_default/list.html</code></p>
+</li>
+</ul>
+<h4 id="add-partials-hard-coded">Add partials (hard coded)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range .Params.Custom_name }}
+    {{ if .hero }}
+        {{ partial &#34;hero.html&#34; }}
+    {{ end }}
+{{ end }}
+</code></pre></div><ul>
+<li>If <code>.hero</code> parameter is available in <code>_index.md</code> file then include <code>hero.html</code></li>
+<li>Use here <strong><code>partial</code></strong> not <code>partials</code></li>
+</ul>
+<h4 id="show-data-in-partials-from-frontmatter">Show data in partials from frontmatter</h4>
+<ul>
+<li>Update <code>layouts/_default/list.html</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range .Params.Custom_name }}
+    {{ if .hero }}
+        {{ partial &#34;hero.html&#34; (dict &#34;hero&#34; .hero) }}
+    {{ end }}
+{{ end }}
+</code></pre></div><ul>
+<li>(<code>dict</code> <code>key</code> <code>.value</code>)</li>
+<li><code>key</code> is the name of parameter in <code>_index.md</code></li>
+<li><code>.value</code> is the data of parameter in <code>_index.md</code></li>
+</ul>
+<h4 id="include-values-of-_indexmd-keys-in-partials">Include <code>values</code> of <code>_index.md</code> <code>keys</code> in partials</h4>
+<p>Update <code>layouts/partials/hero.html</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h3</span>&gt;This is a hero&lt;/<span style="color:#f92672">h3</span>&gt;
+&lt;<span style="color:#f92672">h3</span>&gt;{{ .hero }}&lt;/<span style="color:#f92672">h3</span>&gt;
+</code></pre></div><h4 id="loop-over-_indexmds-keys-and-values-data-manually">Loop over <code>_index.md</code>&rsquo;s <code>keys</code> and <code>values</code> data manually</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range .Params.Custom_name }}
+    {{ range $key, $value := . }}
+        {{ $key }}
+    {{ end }}
+
+    {{ if .hero }}
+        {{ partial &#34;hero.html&#34; (dict &#34;hero&#34; .hero) }}
+    {{ end }}
+{{ end }}
+</code></pre></div><h4 id="loop-over-all-_indexmd-dynamically">Loop over all <code>_index.md</code> dynamically</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range .Params.Custom_name }}
+    {{ range $component, $data := . }} {{/* $component, $data are custom names */}}
+        {{ partial (printf &#34;%s.html&#34; $component) (dict $component $data) }}
+    {{ end }}
+{{ end }}
+</code></pre></div><h4 id="create-data-just-like-api">Create data just like API</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">title</span>: <span style="color:#ae81ff">Homepage</span>
+<span style="color:#f92672">components</span>:
+    - <span style="color:#f92672">hero</span>:
+        <span style="color:#f92672">title</span>: <span style="color:#ae81ff">I&#39;m a hero</span>
+        <span style="color:#f92672">color</span>: <span style="color:#ae81ff">green</span>
+    - <span style="color:#f92672">grid</span>:
+        <span style="color:#f92672">title</span>: <span style="color:#ae81ff">I&#39;m a grid</span>
+        <span style="color:#f92672">items</span>:
+            - <span style="color:#f92672">title</span>: <span style="color:#ae81ff">Item 1</span>
+              <span style="color:#f92672">desc</span>: <span style="color:#ae81ff">I&#39;m the first item</span>
+            - <span style="color:#f92672">title</span>: <span style="color:#ae81ff">Item 2</span>
+              <span style="color:#f92672">desc</span>: <span style="color:#ae81ff">2nd!!!</span>
+    - <span style="color:#f92672">blurb</span>: <span style="color:#ae81ff">I&#39;m a blurb</span>
+    <span style="color:#75715e"># - hero: hero!! (This should not be used It will return an error because of duplicate key)</span>
+    - <span style="color:#f92672">hero</span>: <span style="color:#75715e"># This duplicate is in same manner as above so its OK</span>
+        <span style="color:#f92672">title</span>: <span style="color:#ae81ff">Second hero</span>
+        <span style="color:#f92672">color</span>: <span style="color:#ae81ff">lightblue </span>
+    - <span style="color:#f92672">text block</span>: <span style="color:#ae81ff">Here&#39;s some cool text</span>
+</code></pre></div><h5 id="update-sitelayoutspartialsherohtml">Update <code>&lt;site&gt;/layouts/partials/hero.html</code></h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h3</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: {{ .hero.color }};&#34;</span>&gt;{{ .hero.title }}&lt;/<span style="color:#f92672">h3</span>&gt;
+</code></pre></div><h5 id="update-sitelayoutspartialsgridhtml">Update <code>&lt;site&gt;/layouts/partials/grid.html</code></h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h3</span>&gt;{{ .grid.title }}&lt;/<span style="color:#f92672">h3</span>&gt;
+
+{{ range .grid.items }}
+    {{ .title }} &lt;<span style="color:#f92672">br</span>&gt;
+    {{ .desc }} &lt;<span style="color:#f92672">br</span>&gt;
+{{ end }}
+</code></pre></div><h2 id="deployment">Deployment</h2>
+<h3 id="github-actions-for-hugohttpsgithubcommarketplaceactionshugo-setup"><a href="https://github.com/marketplace/actions/hugo-setup">GitHub Actions for Hugo</a></h3>
+<h3 id="create-workflow">Create workflow</h3>
+<ul>
+<li>Create dirs <code>&lt;site&gt;/.github/workflows/gh-pages.yml</code></li>
+</ul>
+
+    </article>
 
 
 </body>
