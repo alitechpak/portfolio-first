@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>_index.md&#39;s title on Ali</title>
+    <link>/</link>
+    <description>Recent content in _index.md&#39;s title on Ali</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>/abooooot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/abooooot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>My Contact</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>post1</title>
+      <link>/myblogs/post1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/myblogs/post1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>post2</title>
+      <link>/myblogs/post2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/myblogs/post2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

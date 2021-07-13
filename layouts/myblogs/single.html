@@ -1,0 +1,8 @@
+{{ partial "nav" . }}
+
+Check out our blog:
+<ul>
+    {{ range where .Site.Pages "Type" "blog_posts" }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+</ul>

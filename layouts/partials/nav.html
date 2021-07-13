@@ -1,0 +1,12 @@
+<div class="container">
+    <div id="navigation-bar">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                {{ range where .Site.RegularPages "Type" "page" }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+</div>
