@@ -1,5 +1,5 @@
 ---
-title: _index.md's title
+title: _index.md's title new
 components:
     - hero:
         title: I'm a hero
